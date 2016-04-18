@@ -1,13 +1,25 @@
 requirejs.config({
     baseUrl: 'js',
     paths: {
-        app: 'js/libs'
+        app: 'libs',
+        'bootstrap': 'libs/bootstrap-3.3.6-dist/js/bootstrap.min',
+        'jquery': 'libs/jquery/jquery-1.12.3.min',
+        'ko':'libs/knockout-3.4.0'
+    },
+    shim:{
+        'bootstrap':['jquery']
     }
 });
 
-requirejs([ 'libs/jquery-1.12.3.min', 
-            'libs/knockout-3.4.0', 
-            'libs/bootstrap-3.3.6-dist/js/bootstrap.min',
-            'logic'], function(util) {
-                console.log("asdfasdf");
+require(['jquery', 
+        'bootstrap',
+        'ko',
+        'logic'], 
+        function(){
+            console.log("hello")
+        }
+);
+
+define(["jquery", "bootstrap"], function($) {
+
 });

@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <title></title>
   <meta name="description" content="">
- 
-  <script data-main="js/modules" src="js/libs/require.js"></script>
    
   <link type="text/css" rel="stylesheet" href="js/libs/bootstrap-3.3.6-dist/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="css/style.css">
 
+  <script data-main="js/modules" src="js/libs/require.js"></script>
 </head>
 <body>
  
-<div class="contgainer">
+<div class="container">
     <div class="row">
         <div class="col-lg-12">
-                <h1 class="inline">Welcome to KNockout Docs </h1>
+                <h1 class="inline">Welcome to Knockout Docs </h1>
         </div>
     </div>
+
     <div class="row">
         <div class="col-lg-12">
             <h2>Title:</h2>
@@ -36,8 +36,10 @@
     <div class="row">
         <div class="col-lg-12">
             Debug:
+            <p data-bind="text: ko.toJSON($data)"></p>
         </div>
     </div>
+
 </div>
 </body>
 </html>
