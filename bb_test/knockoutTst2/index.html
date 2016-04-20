@@ -1,24 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
+  <title>KnockoutJS test</title>
    
   <link type="text/css" rel="stylesheet" href="js/libs/bootstrap-dist/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  
- <script src="js/libs/jquery.min.js"></script>
-  <script src="js/libs/bootstrap-dist/js/bootstrap.min.js"></script>
-  
-  <script src="js/libs/knockout.js"></script>
-  <script src="js/app/main.js"></script>
-
 </head>
 <body>
  
-<div data-bind="html: getName()"></div>
+<input data-bind="value: name">
+<button data-bind="text: buttonText, click: updateName"></button>
+<div data-bind="text: name"></div>
 
+<p></p>
 
+<!-- ko foreach: lotsOfNames -->
+    <div data-bind="text: $data"></div>
+<!-- /ko -->
+
+<script src="js/libs/knockout-3.4.0.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
