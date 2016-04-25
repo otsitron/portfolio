@@ -15,8 +15,11 @@
 
 <p></p>
 
-<!-- ko foreach: lotsOfNames -->
-    <div data-bind="text: $data"></div>
+<!-- ko foreach: {data: lotsOfNames} -->
+    <span data-bind="text: firstName"></span> <span data-bind="text: lastName"></span>
+    <br>
+    
+    <div data-bind="text: $index, attr:{id: 'hello'}"></div>
 <!-- /ko -->
 
 <script src="js/libs/knockout-3.4.0.js"></script>

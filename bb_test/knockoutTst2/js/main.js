@@ -9,5 +9,8 @@ var myViewModel = {
         return this.lotsOfNames;
     }
 }
-myViewModel.lotsOfNames.push("Olga", "Nik");
+myViewModel.lotsOfNames.push(
+    {firstName: "Olga", lastName: "Tsitron"},
+    {firstName: "Joe", lastName: "Schmo"}
+    );
 ko.applyBindings(myViewModel);
