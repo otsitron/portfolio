@@ -1,0 +1,44 @@
+ol.wizard{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol.wizard li{
+    display: block;
+    float: left;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+ol.wizard li:first-of-type{
+    border-left:  1px solid #CCC;
+}
+ol.wizard li a{
+    float: left;
+    padding: 3px 10px;
+}
+ol.wizard li:last-of-type a{
+    padding-right:0;
+}
+ol.wizard li:last-of-type .chevron{
+    margin-right:-10px;
+}
+ol.wizard .chevron{
+    position: relative;
+    display: block;
+    float: right;
+    margin-left:5px;
+    border-right: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+    width: 20px;
+    height: 20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+ol.wizard li.active a .chevron{
+    background-color: #DDD;
+}
