@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KnockoutJS test</title>
+   
+  <link type="text/css" rel="stylesheet" href="js/libs/bootstrap-dist/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<input data-bind="value: name">
+<button data-bind="text: buttonText, click: updateName"></button>
+<div data-bind="text: name"></div>
+
+<p></p>
+
+<!-- ko foreach: {data: lotsOfNames} -->
+    <span data-bind="text: firstName"></span> <span data-bind="text: lastName"></span>
+    <br>
+    
+    <div data-bind="text: $index, attr:{id: 'hello'}"></div>
+<!-- /ko -->
+
+<script src="js/libs/knockout-3.4.0.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

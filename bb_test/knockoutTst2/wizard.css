@@ -1,0 +1,47 @@
+ol.wizard{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol.wizard li{
+    display: block;
+    float: left;
+    border-top: 1px solid #D3D5D6;
+    border-bottom: 1px solid #D3D5D6;
+    background-color:#f5f6f7;
+    background-image: url("wizard_arrows.png");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: -78px;
+    height: 39px;
+}
+ol.wizard li:first-of-type{
+    background-image: none;
+    border-left: 1px solid #D3D5D6;    
+}
+ol.wizard li.last{
+    width:14px;
+    border:none;
+    background-position-y: -117px;
+    height:41px;
+}
+ol.wizard li.active{
+    background-position-y:-0px;
+    background-color:#203267;
+}
+ol.wizard li.active + li{
+    background-position-y: -39px;
+}
+ol.wizard li.active a{
+    color:#FFF;
+}
+ol.wizard li a{
+    float: left;
+    display: block;
+    padding:14px 30px 10px 30px;
+    text-decoration: none;
+    color:#9DA137;
+    text-transform: uppercase;
+    font-size: 12px;
+}
