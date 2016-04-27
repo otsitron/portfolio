@@ -7,38 +7,41 @@ ol.wizard{
 ol.wizard li{
     display: block;
     float: left;
-    border-top: 1px solid #CCC;
-    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #D3D5D6;
+    border-bottom: 1px solid #D3D5D6;
+    background-color:#f5f6f7;
+    background-image: url("wizard_arrows.png");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: -78px;
+    height: 39px;
 }
 ol.wizard li:first-of-type{
-    border-left:  1px solid #CCC;
+    background-image: none;
+    border-left: 1px solid #D3D5D6;    
+}
+ol.wizard li.last{
+    width:14px;
+    border:none;
+    background-position-y: -117px;
+    height:41px;
+}
+ol.wizard li.active{
+    background-position-y:-0px;
+    background-color:#203267;
+}
+ol.wizard li.active + li{
+    background-position-y: -39px;
+}
+ol.wizard li.active a{
+    color:#FFF;
 }
 ol.wizard li a{
     float: left;
-    padding: 3px 10px;
-}
-ol.wizard li:last-of-type a{
-    padding-right:0;
-}
-ol.wizard li:last-of-type .chevron{
-    margin-right:-10px;
-}
-ol.wizard .chevron{
-    position: relative;
     display: block;
-    float: right;
-    margin-left:5px;
-    border-right: 1px solid #CCC;
-    border-top: 1px solid #CCC;
-    width: 20px;
-    height: 20px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-ol.wizard li.active a .chevron{
-    background-color: #DDD;
+    padding:14px 30px 10px 30px;
+    text-decoration: none;
+    color:#9DA137;
+    text-transform: uppercase;
+    font-size: 12px;
 }
